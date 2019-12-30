@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module type="JAVA_MODULE" version="4">
-  <component name="NewModuleRootManager" inherit-compiler-output="true">
+  <component name="NewModuleRootManager">
+    <output url="file://D:/Java/Java/production/Day04-Code" />
+    <output-test url="file://D:/Java/Java/test/Day04-Code" />
     <exclude-output />
     <content url="file://D:/Java/Java/Day04-Code">
       <sourceFolder url="file://D:/Java/Java/Day04-Code/src" isTestSource="false" />
