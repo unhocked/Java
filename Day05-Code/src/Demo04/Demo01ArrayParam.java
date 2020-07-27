@@ -6,6 +6,11 @@ public class Demo01ArrayParam {
 		parintArray(array);
 		System.out.println("=======AAAA=======");
 		parintArray(array);
+		System.out.println("=======AAAA=======");
+		int[] result = returnArray(10531,2120,300230);
+		System.out.println(result[0]);
+		System.out.println(result[1]);
+
 	}
 
 	/*
@@ -16,8 +21,22 @@ public class Demo01ArrayParam {
 	 */
 
 	public static void parintArray(int[] array){
+		System.out.print("[");
 		for (int i = 0; i < array.length; i++) {
-			System.out.println(array[i]);
+			if(i == array.length-1){
+				System.out.print(array[i]+"]");
+			}else{
+				System.out.print(array[i]+",");
+			}
+
 		}
+	}
+
+
+	public static int[] returnArray(int a ,int b ,int c){
+		int sum = a + b + c;
+		int avg = sum /3;
+		int[] array = {sum, avg};
+		return array;
 	}
 }

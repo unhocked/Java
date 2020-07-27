@@ -5,29 +5,25 @@ package cn.itcast.day05.demo01.cn.itcast.day05.demo02;
  */
 public class Demo06ArrayReverse {
 	public static void main(String[] args) {
-		//如何交换两个变量的值
-		int a = 10;
-		int b = 20;
-		System.out.println(a);
-		System.out.println(b);
-		System.out.println("============");
-		int temp = a;
-		a = b;
-		b = temp;
-		System.out.println(a);
-		System.out.println(b);
-		System.out.println(temp);
-		System.out.println("============");
-		//数组反转
-		int[] arrayA = new int[]{1,2,3,4,5,8};
-		for (int min = 0,max = arrayA.length-1; min < max; min++,max--) {
-			int stemp = arrayA[min];
-			arrayA[min] = arrayA[max];
-			arrayA[max] = stemp;
+		int[] array = {5,10,20,30,40,50,60,70,80,90};
+
+		for (int i = 0; i < array.length; i++) {
+			System.out.println(array[i]);
 		}
-		for (int i = 0; i < arrayA.length; i++) {
-			System.out.println(arrayA[i]);
+		System.out.println("================================");
+		for (int min = 0,max = array.length-1;min < max; min++,max--){
+			int temp = array[min];
+			array[min] = array[max];
+			array[max] = temp;
+
 		}
+
+
+		for (int i = 0; i < array.length; i++) {
+			System.out.println(array[i]);
+
+		}
+
 
 	}
 }

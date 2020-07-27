@@ -4,8 +4,11 @@ package cn.itcast.day05.demo01;
 如果是整数类型,那么默认为0;
 如果是浮点类型,那么默认为0.0;
 如果是字符类型,那么默认为'\u0000';
-如果是不二类型,那么默认为false;
+如果是布尔类型,那么默认为false;
 如果是引用类型,那么默认为null;
+
+注意事项
+静态初始化其实也有默认值的过程,只不过系统自动马上将默认值替换为大括号当中的具体数值.
  */
 public class Demo05Array {
 	public static void main(String[] args) {

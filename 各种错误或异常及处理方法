@@ -1,4 +1,5 @@
 数组索引越界异常 :ArrayIndexOutOfBoundsException
+字符串索引越界异常 :StringIndexOutOfBoundsException
 原因: 索引编号写错了或不存在的索引编号;
 解决: 将索引修改为存在的正确索引编号;
 

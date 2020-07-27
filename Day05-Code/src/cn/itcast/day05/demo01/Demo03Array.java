@@ -20,7 +20,7 @@ package cn.itcast.day05.demo01;
 public class Demo03Array {
 	public static void main(String[] args) {
 		//省略格式的静态初始化
-		int[] arrarA = { 10, 20, 30};
+		int[] arrayA = {2,4,5,6,7,};
 
 		//静态初始化的标准格式,可以拆分成为两个步骤
 		int[] arrayB;

@@ -5,13 +5,12 @@ public class Demo04ArrayMax {
 		int[] arrayA = { 5,15,25,30,10000};
 
 		int max = arrayA[0];
-
 		for (int i = 1; i < arrayA.length; i++) {
 
-
-			if(arrayA[i] > max){
+			if( arrayA[i]>max){
 				max = arrayA[i];
 			}
+
 		}
 
 		System.out.println(max);

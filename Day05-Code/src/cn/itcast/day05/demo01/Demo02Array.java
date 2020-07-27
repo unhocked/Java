@@ -13,9 +13,10 @@ package cn.itcast.day05.demo01;
 public class Demo02Array {
 	public static void main(String[] args) {
 		//直接创建一个数组,里面装的全都是int数字,具体内容直接指定为: 5,15,25,45
-		int[] arrayA = new int[]{ 5, 15, 25, 45 };
+		int[] arrayA = new int[]{5,2,5,6,7,8};
 
 		//创建一个数组,用来装字符串:"Hellow","World","Java"
 		String[] arrayB = new String[]{ "Hellow", "World", "Java"};
- 	}
+		System.out.println(arrayB.length);
+	}
 }
