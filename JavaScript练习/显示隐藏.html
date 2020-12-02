@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+#div1{background-color: #ccc;width: 100px;height: 100px;display: none;}
+	</style>
+
+</head>
+<body>
+	<input type="button" name="" value="显示\隐藏" onclick="showDiv()">
+	<div id="div1"></div>
+
+	<script type="text/javascript">
+
+		function showDiv()
+		{
+			var show = document.getElementById('div1');
+
+			if(show.style.display == 'block')
+			{
+				show.style.display ='none'
+			}else{
+				show.style.display = 'block'
+			}
+		}
+
+	</script>
+</body>
+</html>

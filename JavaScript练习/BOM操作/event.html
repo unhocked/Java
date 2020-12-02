@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<style>
+		.box{
+			width: 100px;
+			height: 100px;
+			margin: 0 auto;
+			background: blue;
+		}
+	</style>
+</head>
+<body>
+	<div class="box"></div>
+	<script>
+		let box = document.querySelector('.box')
+		document.addEventListener('mousemove',e=>{
+            // console.log(e);
+            // console.log(e.clientX,e.clientY);
+            // console.log(e.pageX,e.pageY);
+            // e.stopPropagation()
+			box.style.left = e.pageX + 'px';
+			box.style.top = e.pageY + 'px';
+        })
+	</script>
+</body>
+</html>

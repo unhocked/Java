@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>call和apply调用模式</title>
+</head>
+<body>
+	<script>
+		function sum(a,b){
+			console.log(this);
+			return a + b;
+		}
+
+		sum(1,2);//this=>window
+
+		var t = {
+			name:'my js'
+		};
+
+		// f.call(Context,p1,p2,...)
+		var m = sum.call(t,2,3,9,10);
+		console.log(m);
+
+		var m2 = sum.apply(t,[1,2]);
+		console.log(m2);
+	</script>
+</body>
+</html>

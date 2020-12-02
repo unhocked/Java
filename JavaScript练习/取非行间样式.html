@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		#aa{
+			width: 200px;
+			height: 200px;
+			color: green;
+			background-color: yellow;
+		}
+
+		</style>
+</head>
+<body>
+	<div id="aa"></div>
+<script type="text/javascript">
+
+// 			只有IE能使用
+	// window.onload=function(){
+	// 	var oDiv = document.getElementById('aa');
+	// 	alert(oDiv.currentStyle.width);
+	// }
+	// 
+	// Chrome\firefox可以使用
+	// 
+	
+	function getStyle(obj,name)
+	{
+		if(obj.currentStyle)
+		{
+			return obj.currentStle[name]
+		}else{
+			return getComputedStyle(obj,false)[name]
+		}
+	}
+
+	window.onload=function(){
+		var oDiv = document.getElementById('aa');
+		alert(getStyle(oDiv,'backgroundColor'));
+	};
+	</script>
+</body>
+</html>

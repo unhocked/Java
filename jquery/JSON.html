@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //1'定义基本样式
+       /* var person = {name:"张三",age:"23",gender:"男"}
+        alert(person.name)*/
+
+        //2'嵌套格式 {} --->[]
+        var persons = { "persons":[
+            {name:"张三",age:24,gender:"true"},
+            {name:"李四",age:18,gender:"true"},
+            {name:"王五",age:26,gender:"flase"}
+            ]}
+            // alert(persons.persons[2].name)
+
+            for( var i = 0; i < persons.persons.length; i++){
+                var p = persons.persons[i]
+                for(var key in p){
+                    alert(key+":"+p[key])
+                }
+            }
+    </script>
+</body>
+</html>

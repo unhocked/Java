@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+	var t = [33, 2, 9,5,7,8,44,72,24,73];
+	console.log(t);
+	//冒泡排序
+	
+	//循环控制趟数，i是躺数-1
+	for(var i = 0;i < t.length -1; i++){
+		//每一趟里面：要对比所有的数据进行交换，把大的值交换到后面的位置
+		for(var k = 0; k <= t.length -1 -i; k++){
+			if(t[k] > t[k+1]){
+				var temp = t[k];
+				t[k] = t[k+1];
+				t[k+1] = temp;
+			}
+		}
+	}
+	console.log(t);
+		</script>
+</body>
+</html>

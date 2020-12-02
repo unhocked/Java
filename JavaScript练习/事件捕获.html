@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" value="按钮" id="btn1">
+
+    <script type="text/javascript">
+
+    window.onload=function()
+    {
+        var oBtn=document.getElementById('btn1')
+
+        oBtn.onclick=function()
+        {
+            alert('a');
+        }
+        oBtn.setCapture(); //仅支持IE7以下
+    }
+
+    </script>
+</body>
+</html>

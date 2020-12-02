@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<ul>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+
+	<!-- 隔行变色 -->
+	<script type="text/javascript">
+	var aLi = document.getElementsByTagName('li');
+
+	for(var i = 0; i<aLi.length;i++){
+		if(i % 2 == 0){
+			aLi[i].style.background = '#ccc';
+		}else{
+			aLi[i].style.background = 'black';
+		}
+	}
+	</script>
+			秒转分
+	<script type="text/javascript">
+		var s = 1524;
+		alert(parseInt(s/60)+'分'+s%60+'秒');
+	</script>
+</body>
+</html>

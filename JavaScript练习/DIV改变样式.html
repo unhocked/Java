@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+
+	#div1{width: 100px;height: 100px;background-color: #ccc;}
+
+		</style>
+</head>
+<body>
+		<input type="button" name="" value="变高" onclick="toHeigth()">
+		<input type="button" name="" value="变宽" onclick="toWidth()">
+		<input type="button" name="" value="变红" onclick="toRed()">
+		<div id="div1"></div>
+		
+		<script type="text/javascript">
+			var oDiv = document.getElementById('div1')
+		function toHeigth()
+		{
+			
+			oDiv.style.height = '200px'
+		}
+		function toWidth()
+		{
+			oDiv.style.width = '200px'
+		}
+		function toRed()
+		{
+			oDiv.style.background = 'red'
+		}
+
+
+		</script>
+</body>
+</html>

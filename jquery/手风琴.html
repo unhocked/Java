@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    *{padding: 0;margin: 0;}
+    li{border: 1px solid #ccc;list-style: none;width:200px}
+    li>div{display: none;height: 100px;background: pink;}
+    span{ text-align: center;height: 20px;cursor: pointer;display: block;}
+    </style>
+</head>
+<body>
+    <ul>
+        <li>
+            <span class="click-me">1</span>
+            <div></div>
+        </li>
+        <li>
+            <span class="click-me">2</span>
+            <div></div>
+        </li>
+        <li>
+            <span class="click-me">3</span>
+            <div></div>
+        </li>
+        <li>
+            <span class="click-me">4</span>
+            <div></div>
+        </li>
+        <li>
+            <span class="click-me">5</span>
+            <div></div>
+        </li>
+    </ul>
+</body>
+<script src="jquery-1.11.3.min.js"></script>
+<script>
+    $(".click-me").click(function(){
+        $(this).next().slideDown(400).parent().siblings().children("div").slideUp(400)
+    })
+</script>
+</html>

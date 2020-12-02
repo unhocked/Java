@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+            <style type="text/css">
+            #curNum,#moneyNum{
+                padding:0.3em;
+                border: rgba(14,250,248,1) solid 2px;
+                font-size: 18px;
+                text-align: center;
+            }
+        </style> 
+
+
+<h5 style="text-align: center;font-weight: bold;">当月通行次数</h5>
+<div id="curNum" class="col-sm-12" >
+    0000000000000
+</div> 
+<script type="text/javascript">
+
+setNumText();
+    
+        var currentNum=2559;
+        var i=0;
+        var numText=$("#curNum");
+        
+        function setNumText(){
+            var time=1;
+            if (i<=currentNum) {
+                i++;
+                setNum(i,numText);
+            }
+            if(i>=currentNum && j>=moneyNum){
+                
+            }else {
+                setTimeout("setNumText();",time);
+            }
+        }
+                
+        function setNum(num,obj){ 
+            if (num<=9 && num>=0) {
+                obj.text("000000000000"+num);
+            }else if (num<=99 && num>9) {
+                obj.text("00000000000"+num);
+            }else if (num<=999 && num>99) {
+                obj.text("0000000000"+num);
+            }else if (num<=9999 && num>999) {
+                obj.text("000000000"+num);
+            }else if (num<=99999 && num>9999) {
+                obj.text("00000000"+num);
+            }else if (num<=999999 && num>99999) {
+                obj.text("0000000"+num);
+            }else if (num<=9999999 && num>999999) {
+                obj.text("000000"+num);
+            }else if (num<=99999999 && num>9999999) {
+                obj.text("00000"+num);
+            }else if (num<=999999999 && num>99999999) {
+                obj.text("0000"+num);
+            }else if (num<=9999999999 && num>999999999) {
+                obj.text("000"+num);
+            }else if (num<=99999999999 && num>9999999999) {
+                obj.text("00"+num);
+            }else if (num<=999999999999 && num>99999999999) {
+                obj.text("0"+num);
+            }else if (num<=9999999999999 && num>999999999999) {
+                obj.text(""+num);
+            }
+        }
+</script>
+</body>
+</html>

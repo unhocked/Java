@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>函数调用模式</title>
+</head>
+<body>
+	<script>
+	//函数调用模式
+	function f(a,b){
+		console.log(a+ '' +b);
+		this.a = 19; //此时this等于window/true
+		console.log('a' in window)
+		console.log(this)	//输出window，全局对象，严格模式输出undefined
+	}
+		f(2,3);//直接调用函数：f(); 函数调用模式
+
+
+		function Dog() {
+			this.age = 19;
+			console.log(this);
+		}
+		Dog();	//函数执行模式 =>window
+		var d = new Dog(); //构造函数执行模式 => d对象
+	</script>
+</body>
+</html>

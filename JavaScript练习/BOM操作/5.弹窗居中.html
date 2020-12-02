@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<style>
+		.inner{height: 500px;border: 1px solid #000;}
+		.banner{position: absolute;top: 0;left: 0;width: 200px;height: 200px;background:  greenyellow}
+	</style>
+</head>
+<body>
+<div class="banner"></div>
+<div class="inner"></div>
+<div class="inner"></div>
+<div class="inner"></div>
+<div class="inner"></div>
+<div class="inner"></div>
+
+<script>
+	let banner = document.querySelector('.banner')
+	function setBanner(){
+	    let t = (window.innerHeight - banner.offsetHeight)/2;
+	    let l = (window.innerWidth - banner.offsetWidth)/2;
+        let scrollY = document.body.scrollTop || document.documentElement.scrollTop;
+        let scrollX = document.body.scrollLeft || document.documentElement.scrollLeft;
+
+		banner.style.top = t + scrollY +'px';
+	    banner.style.left = l + scrollX +'px';
+
+    }
+    setBanner();
+	window.onscroll = function(){
+	    banner.style.transition = "1s";
+        setBanner();
+	}
+    window.onresize = function(){
+        banner.style.transition = "1s";
+        setBanner();
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+h4{text-align: center;}
+/*nav*/
+.tabsbox .container{width: 1000px;margin: 0 auto; border: 1px solid #e3a5a5;}
+.tabsbox .first-nav {position: relative;}
+.tabsbox .first-nav ul{position: relative; width: 95%;display: flex;list-style: none;padding: 0;margin: 0; height: 50px;line-height: 50px;text-align: center;}
+.tabsbox .first-nav ul li{cursor: pointer; position: relative; flex: 1;overflow: hidden; border-left: 1px solid #ccc;border-bottom: 1px solid #ccc;}
+.tabsbox .first-nav ul li:first-child{border-left: none;}
+.tabsbox .first-nav ul li.active{border-bottom: none;}
+.tabsbox .first-nav ul li .icon-close{position: absolute;width: 50px;height: 50px;background: #000;border-radius: 25px;right: -25px;top: -25px;color: #fff;text-align: left; text-indent: 10px;line-height: 70px;transition: .3s;cursor: pointer;}
+.tabsbox .first-nav ul li .icon-close:hover{background: #ccc;color: #000}
+.tabsbox .first-nav .tabadd{ position: absolute;border-left: 1px solid #ccc; top: 0; right: 0;width: 5%;height: 50px;border-bottom: 1px solid #ccc;box-sizing: border-box;transition: .3s;font-weight: bold;}
+.tabsbox .first-nav .tabadd:hover{background: #fab0b0;color: #fff;cursor: pointer;}
+.tabsbox .first-nav .tabadd > span{ text-align: center;line-height: 30px;width: 20px;display: block;height: 30px; margin: 10px auto 0;}
+
+/*box*/
+.tabsbox section{display: none;}
+.tabsbox section.conactive{display: block;min-height: 500px;line-height: 500px;text-align: center;font-size: 18px;}
+
+

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+<script>
+	function Star(name,age){
+	    this.name = name
+		this.age = age
+		// this.sing = function(){
+	    //     console.log("1")
+		// }
+	}
+	Star.prototype.sing = function(){
+        console.log("sing")
+	}
+	Star.prototype = {
+
+	}
+	    console.log("movie")
+	}
+	var ldh = new Star()
+	var zxy = new Star()
+	ldh.sing()
+    console.log(Star.prototype.constructor);
+    console.log(zxy.__proto__.constructor);
+</script>
+</body>
+</html>

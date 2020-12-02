@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>函数四种调用模式案例</title>
+</head>
+<body>
+	<script type="text/javascript">
+	//1、定义按钮类，要求按钮类的构造函数可以接受参数初始化按钮的宽度，高度，左边xy
+			// function Btn(width,height,x,y){
+			// 	//构造函数内部初始化
+
+			// 	this.width = width;//给this对象上的width属性赋值，width参数的参数值
+			// 	this.height = height;
+			// 	this.px = x;
+			// 	this.py = y;
+
+			// }
+
+			// var b = new Btn(100,100,30,30);
+
+
+
+			// 2、借用math的min方法实现求数组[2,9,33]中的最小值
+			// var m = Math.min(2,9,33);
+			// var m = Math.min.apply(null, [2,9,1]);
+			// console.log(m);
+
+
+			//3、把类数组转换成真正的数组
+			var t = {};	//类数组类对象
+			t[0] = 1;
+			t[1] = true;
+			t[2] = 'a';
+			t.length = 3;
+
+			var m = [1,2,4];
+			m.slice();//如果什么都不传，默认是从0开始索引
+			//第一个参数是：索引开始的位置，startIndex
+			//第二个参数是：索引结束的位置+1 endeIndex
+
+			//如果借用 数组的slice方法，然后把this指向到t对象，那么slice方法就会返回t对象的对应的数组。
+
+			var k = Array.prototype.slice.call(t,0);//用过slice方法可以把类数组转换成真正的数组。
+			
+			console.log(k);
+
+
+
+
+	</script>
+</body>
+</html>

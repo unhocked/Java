@@ -1,0 +1,9 @@
+数组索引越界异常 :ArrayIndexOutOfBoundsException
+字符串索引越界异常 :StringIndexOutOfBoundsException
+原因: 索引编号写错了或不存在的索引编号;
+解决: 将索引修改为存在的正确索引编号;
+
+
+空指针异常 : NullPointerException
+原因: 忘了new
+解决: 补上new

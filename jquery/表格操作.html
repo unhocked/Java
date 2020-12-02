@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrap">
+        <input type="button" value="清空内容" id="btnDel">
+        <input type="button" value="添加内容" id="btnAdd">
+        <table>
+            <thead>
+                <tr>
+                <td>名称</td>
+                <td>number</td>
+                <td>Num</td>
+                <td>操作</td>
+            </tr>
+              
+            </thead>
+            <tbody id="j_jb">
+                <tr>
+                    <td>javascript</td>
+                    <td>111</td>
+                    <td>222</td>
+                    <td><a href="javascript:" class="get">删除</a></td>
+                </tr>
+                <tr>
+                    <td>css</td>
+                    <td>111</td>
+                    <td>222</td>
+                    <td><a href="javascript:" class="get">删除</a></td>
+                </tr>
+                <tr>
+                    <td>jquery</td>
+                    <td>111</td>
+                    <td>222</td>
+                    <td><a href="javascript:" class="get">删除</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script src="jquery-3.4.1.js"></script>
+    <script>
+        $(function(){
+            $("#btnDel").on("click",function(){
+                $("#j_jb").empty();
+            })
+            $("#j_jb").on("click",".get",function(){
+                $(this).parent().parent().remove();
+            })
+            $("#btnAdd").on("click",function(){
+                $("<tr> <td>jquery</td> <td>111</td> <td>222</td> <td><a href='javascript:' class='get'>删除</a></td> </tr>").appendTo("tbody")
+
+            })
+        })
+    
+    </script>
+</body>
+</html>

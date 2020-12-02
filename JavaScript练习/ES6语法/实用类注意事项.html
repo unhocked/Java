@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+ <button>按钮</button>
+ <script>
+	 var that;
+	 class Star{
+	     constructor(name,age){
+	         that = this
+	         this.name = name;
+		     this.age = age;
+		     this.btn = document.querySelector('button');
+		     this.btn.onclick = this.sing;
+	     }
+	     sing(){
+	         console.log(that.name);
+	         console.log(this);
+	     }
+	     dance(){
+	         that = this
+	         console.log(this)
+	     }
+	 }
+	 var star = new Star("hellow world",23);
+	 star.dance();
+	 console.log(that === star)
+ </script>
+</body>
+</html>

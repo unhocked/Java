@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+    window.onload = function()
+    {
+        document.onclick = function(ev)
+        {
+            var oEvent = ev || event;
+            alert(oEvent.clientX+','+oEvent.clientY);
+        }
+    }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>arguments模拟函数重载</title>
+</head>
+<body>
+	<script type="text/javascript">
+	//arguments模拟函数重载
+	//创建一个矩形的类型。构造函数接受一个参数，返回一个正方形，接受两个参数返回一个矩形。
+	function React(){
+		//如果一个参数，返回一个正方形
+		if(arguments.length ==1){
+		this.width = arguments[0];
+		this.height = arguments[0];
+
+			
+		}
+
+		//如果两个参数，返回一个矩形
+		if(arguments.length > 1){
+			this.width = arguments[0];
+			this.height = arguments[1];
+		}
+
+		//由于跟原型上的toString方法重名，那么会覆盖object原型上的toString方法
+		this.toString = function(){
+			console.log('width:' + this.width + '\nheight:' +this.height)
+		}
+	}
+	var r1 = new React(10);
+	console.log(r1.toString());
+	var r2 = new React(10,6);
+	console.log(r2.toString());
+	</script>
+</body>
+</html>

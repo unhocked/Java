@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>旋转</title>
+<style>
+* {margin:0; padding:0; border:0;}
+div {width:200px; height:200px; margin-left:40%; margin-top:20%;}
+img {width:200px; height:200px; border-radius:100px; animation:myfirst 5s linear infinite; -webkit-animation:myfirst 20s linear infinite; animation-play-state:running; -webkit-animation-play-state:running;}/*running为播放,    linear:表示动画匀速播放；*/
+img:hover {animation-play-state:paused; -webkit-animation-play-state:paused;}/*paused为暂停*/
+ 
+@keyframes myfirst {0% {transform:rotate(0deg);} 100% {transform:rotate(360deg);}}
+@-webkit-keyframes myfirst {0% {transform:rotate(0deg);} 100% {transform:rotate(360deg);}}
+</style>
+</head>
+ 
+<body>
+<div><img src="image/earth.png"/><div>
+</body>
+</html>

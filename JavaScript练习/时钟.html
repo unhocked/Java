@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body style="background: black;font-size: 100px;color: white;">
+	<img src="image/0.png">
+	<img src="image/0.png">
+	:
+	<img src="image/0.png">
+	<img src="image/0.png">
+	:
+	<img src="image/0.png">
+	<img src="image/0.png">
+
+	<script type="text/javascript">
+
+	function toDou(n){
+		if(n<10){
+			return '0'+n;
+		}else {
+			return ""+n;
+		}
+	}
+
+		window.onload = function()
+		{
+			var aImg = document.getElementsByTagName('img');
+//			 var str = '654321';
+			function tick(){
+			var oDate = new Date();
+
+			var str = toDou(oDate.getHours())+toDou(oDate.getMinutes())+toDou(oDate.getSeconds());
+			// alert(str);
+
+			for (var i = 0; i<aImg.length;i++)
+			{
+				aImg[i].src='image/' + str.charAt(i) +'.png';
+			}
+
+			}
+			setInterval(tick,1000);
+			tick()
+
+		}
+	</script>
+</body>
+</html>

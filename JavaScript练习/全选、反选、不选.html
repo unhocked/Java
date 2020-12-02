@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+			<!-- <input id="btn1" type="button" name="" value="全选">
+			<input id="btn2" type="button" name="" value="不选">
+			<input id="btn3" type="button" name="" value="反选">
+
+			<div id="div1">
+		<input type="checkbox" name="">
+		<input type="checkbox" name="">
+		<input type="checkbox" name="">
+		<input type="checkbox" name="">
+		<input type="checkbox" name="">
+		<input type="checkbox" name="">
+		<input type="checkbox" name="">
+		<input type="checkbox" name="">
+		<input type="checkbox" name="">
+		<input type="checkbox" name="">
+		<input type="checkbox" name="">
+		<input type="checkbox" name="">
+		<input type="checkbox" name="">
+		<input type="checkbox" name="">
+		<input type="checkbox" name="">
+			</div>
+
+			<script type="text/javascript">
+
+			window.onload = function()
+			{
+				var oBtn1 = document.getElementById('btn1')
+				var oBtn2 = document.getElementById('btn2')
+				var oBtn3 = document.getElementById('btn3')
+
+				var oDiv = document.getElementById('div1')
+				var aCh = oDiv.getElementsByTagName('input')
+
+				oBtn1.onclick = function()
+				{
+					for(var i = 0;i<aCh.length;i++)
+					{
+						aCh[i].checked = true
+					}
+				}
+
+				oBtn2.onclick = function()
+				{
+					for(var i = 0; i<aCh.length;i++)
+					{
+						aCh[i].checked = false
+					}
+				}
+
+				oBtn3.onclick = function()
+				{
+					for(var i = 0; i<aCh.length;i++)
+					{
+						if(aCh[i].checked == true)
+						{
+							aCh[i].checked = false
+						}else{
+							aCh[i].checked = true
+						}
+					}
+				}
+
+			}
+
+
+			</script> -->
+
+	<input type="button" id="btn1" value="全选">
+	<input type="button" id="btn2" value="不选">
+	<input type="button" id="btn3" value="反选">
+	<div id="div1">
+	
+	<input type="checkbox">
+	<input type="checkbox">
+	<input type="checkbox">
+	<input type="checkbox">
+	<input type="checkbox">
+	<input type="checkbox">
+	<input type="checkbox">
+	<input type="checkbox">
+	<input type="checkbox">
+	<input type="checkbox">
+	<input type="checkbox">
+	
+	</div>
+
+	<script type="text/javascript">
+
+	window.onload = function()
+	{
+		var oBtn1 = document.getElementById('btn1')
+		var oBtn2 = document.getElementById('btn2')
+		var oBtn3 = document.getElementById('btn3')
+
+		var oDiv = document.getElementById('div1')
+		var aCh = oDiv.getElementsByTagName('input')
+
+		oBtn1.onclick = function()
+		{
+			for(var i = 0; i<aCh.length;i++)
+			{
+				aCh[i].checked = true
+			}
+		}
+
+		oBtn2.onclick = function()
+		{
+			for(var i = 0; i<aCh.length; i++)
+			{
+				aCh[i].checked = false
+			}
+		}
+
+		oBtn3.onclick = function()
+		{
+			for(var i = 0;i<aCh.length; i++)
+			{
+				if(aCh[i].checked ==true)
+				{
+					aCh[i].checked = false
+				}else{
+					aCh[i].checked = true
+				}
+			}
+		}
+	}
+
+	</script>
+</body>
+</html>

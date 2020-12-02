@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="css/skin1.css" id="skin">
+</head>
+<body>
+	<button type="button" value="按钮" onclick="skin1()" class="sk">皮肤1</button>
+	<button type="button" value="按钮" onclick="skin2()" class="sk">皮肤2</button>
+
+	<script type="text/javascript">
+
+	function skin1()
+	{
+		var oL = document.getElementById('skin')
+		oL.href = 'css/skin1.css'
+	}
+
+	function skin2()
+	{
+		var oL = document.getElementById('skin')
+		oL.href = 'css/skin2.css'
+	}
+
+	</script>
+</body>
+</html>

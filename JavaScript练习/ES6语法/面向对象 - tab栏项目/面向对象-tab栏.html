@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<link rel="stylesheet" href="tab.css">
+</head>
+<body>
+	<main class="tabsbox" id="tab">
+		<h4>JS 面向对象动态添加标签页</h4>
+		<div class="container">
+			<nav class="first-nav">
+				<ul>
+					<li class="active"><span>测试1</span><span class="icon-close">X</span></li>
+					<li><span>测试2</span><span class="icon-close">X</span></li>
+					<li><span>测试3</span><span class="icon-close">X</span></li>
+				</ul>
+				<div class="tabadd">
+					<span>+</span>
+				</div>
+			</nav>
+		<!--	tab内容      -->
+			<div class="tabscon">
+				<section class="conactive">测试1</section>
+				<section>测试2</section>
+				<section>测试3</section>
+			</div>
+		</div>
+	</main>
+
+	<script src="js/tab.js"></script>
+</body>
+</html>

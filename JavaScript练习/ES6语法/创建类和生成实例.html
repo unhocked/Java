@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+<script>
+	// 创建类
+	class Father {
+	   constructor(x,y){
+	        this.x = x
+		   this.y = y
+	   }
+	   sum(){
+	      console.log(this.x + this.y)
+	   }
+    }
+
+	//继承
+	class Son extends Father {
+	    constructor(x,y){
+            super(x,y)
+            this.x = x
+		    this.y = y
+	    }
+	   subtract(){
+            console.log(this.x - this.y)
+           console.log(this.sum());
+       }
+	}
+	var son = new Son(20,10)
+	son.subtract();
+	//使用类进行创建对象
+
+</script>
+</body>
+</html>

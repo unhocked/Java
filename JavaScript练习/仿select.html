@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style type="text/css">
+
+        #div1{background-color: #ccc;width: 500px;height: 300px;display: none;}
+
+</style>
+</head>
+<body>
+    <input id="btn1" type="button" value="按钮">
+    <div id="div1"><a href="">a</a></div>
+
+
+    <script>
+
+    window.onload = function()
+    {
+        var oBtn = document.getElementById('btn1')
+        var oDiv = document.getElementById('div1')
+
+        oBtn.onclick = function(ev)
+        {
+            var oEvent = ev || event
+            oDiv.style.display = 'block'
+            oEvent.cancelBubble = true
+        }
+        document.onclick = function()
+        {
+            oDiv.style.display = 'none'
+        }
+    }
+    </script>
+</body>
+</html>

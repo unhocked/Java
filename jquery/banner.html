@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            position: relative;
+            width: 744px;
+            height: 305px;
+            margin: 200px auto 0;
+            transition: .6s;
+        }
+
+        .container li {
+            position: absolute;
+            list-style: none;
+            display: none;
+        }
+
+        .container li:first-child {
+            display: block;
+        }
+
+        .container li a {
+            display: block;
+            height: 305px;
+        }
+
+        .container .prev,
+        .next {
+            display: none;
+            position: absolute;
+            top: 128px;
+            width: 50px;
+            height: 50px;
+            border-radius: 25px;
+            background: rgba(0, 0, 0, 0.2);
+            text-align: center;
+            line-height: 50px;
+            color: #fff;
+            transition: .6s;
+            cursor: pointer;
+        }
+
+        .container:hover span {
+            display: block;
+            transition: .6s;
+        }
+
+        .container span:hover {
+            background: rgba(0, 0, 0, 0.6);
+        }
+
+        .container .prev {
+            left: calc(50% - 360px);
+        }
+
+        .container .next {
+            right: calc(50% - 360px);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <ul>
+            <li><a href="javascript:"><img src="images/slots_banner01.jpg" alt="banner"></a></li>
+            <li><a href="javascript:"><img src="images/slots_banner02.jpg" alt="banner"></a></li>
+            <li><a href="javascript:"><img src="images/slots_banner03.jpg" alt="banner"></a></li>
+            <li><a href="javascript:"><img src="images/slots_banner04.jpg" alt="banner"></a></li>
+        </ul>
+        <span class="prev">上</span>
+        <span class="next">下</span>
+    </div>
+    <script src="jquery-1.11.3.min.js"></script>
+    <script>
+
+        var count = 0;
+    $(".next").click(function(){
+        count++;
+        if(count == $(".container li").length){
+            count = 0
+        }
+        console.log(count)
+        $(".container li").eq(count).fadeIn().siblings().fadeOut();
+    })
+
+    $(".prev").click(function(){
+        count--;
+        if(count == -1 ){
+            count = $(".container li").length - 1 ;
+        }
+        console.log(count)
+        $(".container li").eq(count).fadeIn().siblings().fadeOut();
+    })
+
+    </script>
+</body>
+</html>

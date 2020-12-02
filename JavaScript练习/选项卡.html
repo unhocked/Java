@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+	<style type="text/css">
+
+	#div1 div{width: 100px;height: 100px;background-color: #ccc; border: 1px solid red;display: none;}
+	#div1 .active{background-color: yellow;}
+	</style>
+</head>
+
+
+<body>
+	
+	<div id="div1">
+
+	<input type="button" name="" value="教育" class="active">
+	<input type="button" name="" value="培训">
+	<input type="button" name="" value="出国">
+	<input type="button" name="" value="招生">
+
+	<div style="display: block;">11</div>
+	<div>22</div>
+	<div>33</div>
+	<div>44</div>
+
+	</div>
+
+
+<script type="text/javascript">
+
+ window.onload = function()
+ {
+ 	var oDiv1 = document.getElementById('div1')
+ 	var aBtn = oDiv1.getElementsByTagName('input')
+ 	var aDiv = oDiv1.getElementsByTagName('div')
+ 	
+
+
+ 	// for(var i = 0;i<aBtn.length;i++)
+ 	// {
+ 	// 	aBtn[i].index = i
+ 	// 	aBtn[i].onclick = function()
+ 	// 	{
+ 	// 		for(var i = 0; i<aBtn.length; i++)
+ 	// 		{
+ 	// 			aBtn[i].className = ''
+ 	// 			aDiv[i].style.display = 'none'
+ 	// 		}
+ 	// 		this.className = 'active'
+ 	// 		aDiv[this.index].style.display = 'block'
+ 	// 	}
+ 	// }
+
+ 	var oDiv1 = document.getElementById('div1')
+ 	var aBtn = oDiv1.getElementsByTagName('input')
+ 	var aDiv = oDiv1.getElementsByTagName('div')
+
+
+ 	for(var i = 0;i<aBtn.length;i++)
+ 	{
+ 		aBtn[i].index = i;
+ 		aBtn[i].onclick = function()
+ 		{
+ 			for(var i = 0;i<aBtn.length;i++)
+ 			{
+ 				aBtn[i].className = ''
+ 				aDiv[i].style.display = 'none'
+
+ 			}
+ 			this.className = 'active'
+ 			aDiv[this.index].style.display = 'block'
+ 		}
+ 	}
+ }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    a{display: block;}
+    </style>
+</head>
+<body>
+    <input type="button" value="按钮">
+    <div>
+            <a href="javascript:">1</a>
+    </div>
+    <span> <a href="javascript:">2</a></span>
+    <script src="jquery-3.4.1.js"></script>
+    <script>
+    $("input").click(function(){
+        $("<a href='javascript:'>新增</a>").appendTo("div")
+    })
+    $("div").on("click","a",function(){
+        alert('hh')
+    })
+    </script>
+</body>
+</html>

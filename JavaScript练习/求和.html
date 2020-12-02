@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<input type="text" name="" id="txt1">
+	<input type="text" name="" id="txt2">
+	<button id="btn1" value="求和" type="button">求和</button>
+
+	<script type="text/javascript">
+
+	window.onload = function()
+	{
+		var oTxt1 = document.getElementById('txt1')
+		var oTxt2 = document.getElementById('txt2')
+		var oBtn = document.getElementById('btn1')
+
+		oBtn.onclick = function()
+		{
+			var n1 = parseInt(oTxt1.value)
+			var n2 = parseInt(oTxt2.value)
+
+			if(isNaN(n1))
+			{
+				alert('第一个不是数字')
+			}else if(isNaN(n2))
+			{
+				alert('第二个值不是数字')
+			}else{
+				alert(n1+n2)
+			}
+		}
+	}
+
+	</script>
+</body>
+</html>

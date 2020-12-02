@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>鍑芥暟閫掑綊璋冪敤</title>
+</head>
+<body>
+	<script type="text/javascript">
+	function sumNum(num){
+		//閫掑綊涓瀹氳鏈変釜缁撴潫鑷繁璋冪敤鐨勫嚭鍙
+		if(num <= 1){
+			return num;//鍑芥暟鍙鎵ц鍒皉eturn褰撳墠鍑芥暟绔嬪嵆缁撴潫鎵ц
+		}
+		//瀹炵幇鍑芥暟璋冪敤鍑芥暟鑷繁銆
+		return sumNum(num -1) + num;
+	}
+	console.log(sumNum(100));
+	</script>
+</body>
+</html>

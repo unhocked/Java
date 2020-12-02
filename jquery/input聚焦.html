@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" value="洋酒" id="YJ">
+    <script src="jquery-3.4.1.js"></script>
+    <script>
+        $("#YJ").focus(function(){
+            if($(this).val() === "洋酒"){
+                $(this).val("")
+            }else{
+                $(this).val("洋酒")
+            }
+        })
+        $("#YJ").blur(function(){
+            if($(this).val() === ""){
+                $(this).val("洋酒")
+            }
+        })
+    </script>
+</body>
+</html>
